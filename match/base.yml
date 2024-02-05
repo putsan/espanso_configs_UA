@@ -1,0 +1,99 @@
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+# You can use this file to define the base matches (aka snippets)
+# that will be available in every application when using espanso.
+
+# Matches are substitution rules: when you type the "trigger" string
+# it gets replaced by the "replace" string.
+matches:
+  # Simple text replacement
+  - trigger: ":espanso"
+    replace: "Hi there!"
+
+  # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
+
+  # But matches can also be dynamic:
+
+  # Print the current date
+  - trigger: ":date"
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%m/%d/%Y"
+
+  # Print the output of a shell command
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo 'Hello from your shell'"
+
+  # And much more! For more information, visit the docs: https://espanso.org/docs/
+
+
+  # MY Matches
+  # ZERO for now
+
+  # Important symbols! (most on Cyrillic)
+  - trigger: "№"
+    replace: "#"
+  - trigger: ":грн"
+    replace: "₴"
+
+  # Emojis
+  - trigger: ":100"
+    replace: "💯"
+
+  # Obsidian
+  - triggers: ["[[l", "[[л", "[[д"]
+    replace: " | [[fname|alt]]"
+  - triggers: ["»»", ")_"] # isn't work first((
+    replace: ">"
+  - triggers: ["й»", "йЮ", q>]
+    replace: "> [!$|$]"
+
+  #App NAMES
+  - triggers: ["gh", "GH", "гх", "ГХ"]
+    replace: "GitHub"
+    word: true
+  - triggers: ["Блу", "блу"]
+    replace: "Bluesky"
+  - triggers: ["ЮТ", "ют", "yy", "юю"]
+    replace: "YouTube"
+    word: true
+  - triggers: ["ЮМ", "юм"]
+    replace: "YT Music"
+  - triggers: ["DD", "діскор"]
+    replace: "Discord"
+
+  - triggers: ["пзе", "gpt"]
+    replace: "GPT"
+  - triggers: ["спзе", "cgpt"]
+    replace: "Chat GPT"
+  - triggers: ["espanso", "уізф"]
+    replace: "Espanso"
+  - triggers: ["фтвкщ", "andro"]
+    replace: "Android"
+
+  #Espanso
+  - triggers: ["es2", "уі2"]
+    replace: "- triggers: [\"\", \"\"]
+      replace: \"$|$\""
+
+  # Дописування/пропозиції слова (закінчення)
+  - trigger: "корист"
+    replace: "користується"
+  - trigger: "корист"
+    replace: "користуєтеся"
+  - trigger: "корист"
+    replace: "користуюся"
+
+  # Виправлення слів
+  - trigger: "логи"
+    replace: "лоґи"
