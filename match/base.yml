@@ -46,22 +46,30 @@ matches:
   - trigger: ":грн"
     replace: "₴"
 
-  # Emojis
+  # Emojis (most of for Obsidian)
   - trigger: ":100"
     replace: "💯"
-
+  - triggers: [":^", "::"]
+    replace: "🔺" # Obsidian
   # Obsidian
   - triggers: ["[[l", "[[л", "[[д"]
     replace: " | [[fname|alt]]"
   - triggers: ["»»", ")_"] # isn't work first((
     replace: ">"
-  - triggers: ["й»", "йЮ", q>]
+  - triggers: ["й»", "йЮ", "q>", "йю", "ЙЮ"]
     replace: "> [!$|$]"
+  - triggers: ["-t", "-е"]
+    replace: "- [ ]"
 
-  #App NAMES
+  # App NAMES
   - triggers: ["gh", "GH", "гх", "ГХ"]
     replace: "GitHub"
     word: true
+  - trigger: "місщву"
+    replace: "VS Code"
+  - trigger: "пше"
+    replace: "git"
+
   - triggers: ["Блу", "блу"]
     replace: "Bluesky"
   - triggers: ["ЮТ", "ют", "yy", "юю"]
@@ -71,17 +79,28 @@ matches:
     replace: "YT Music"
   - triggers: ["DD", "діскор"]
     replace: "Discord"
+  - triggers: ["реддіт", "reddit", "куввше"]
+    replace: "Reddit"
 
+  - triggers: ["ТГ", "тг", "tg"]
+    replace: "TG"
   - triggers: ["пзе", "gpt"]
     replace: "GPT"
   - triggers: ["спзе", "cgpt"]
     replace: "Chat GPT"
-  - triggers: ["espanso", "уізф"]
+  - triggers: ["obs+", "obsid", "обс+", "щиі+"]
+    replace: "Obsidian"
+  - triggers: ["espanso", "уізфтіщ"]
     replace: "Espanso"
+  - triggers: ["cq+", "сй+", "сщзнй"]
+    replace: "CopyQ"
+
   - triggers: ["фтвкщ", "andro"]
     replace: "Android"
 
-  #Espanso
+  # Espanso
+  - trigger: "w:t"
+    replace: "word: true"
   - triggers: ["es2", "уі2"]
     replace: "- triggers: [\"\", \"\"]
       replace: \"$|$\""
@@ -92,8 +111,42 @@ matches:
   - trigger: "корист"
     replace: "користуєтеся"
   - trigger: "корист"
-    replace: "користуюся"
+    replace: "користуюся" # доопрацювати ці Корис треба!!))
+  - trigger: "корист"
+    replace: "користовувати"
+  - trigger: "корист"
+    replace: "користовуватися"
+  - trigger: "корист"
+    replace: "користання"
 
+  - trigger: "оф"
+    replace: "офіційні"
+    word: true
+
+  - trigger: "анг+"
+    replace: "англомовну"
+  - trigger: "укр+"
+    replace: "українська"
+  - trigger: "укр+"
+    replace: "українську"
+
+  - trigger: "кон+"
+    replace: "конфігурацію"
+  - trigger: "реа+"
+    replace: "реалізовано"
   # Виправлення слів
   - trigger: "логи"
     replace: "лоґи"
+    word: true
+
+  # Анг трансліт/відповідники
+  - trigger: "рідмі"
+    replace: "Readme"
+  - triggers: ["Markd", "маркд"]
+    replace: "Markdown"
+  - triggers: ["конфіг"]
+    replace: "config"
+
+  # Певні власні назви (some main)
+  - triggers: ["namir+", "тфьшк"]
+    replace: "namirGO"
