@@ -45,6 +45,8 @@ matches:
     replace: "#"
   - trigger: ":грн"
     replace: "₴"
+  - trigger: "ʼʼ"
+    replace: "@"
 
   # Emojis (most of for Obsidian)
   - trigger: ":100"
@@ -89,7 +91,7 @@ matches:
     replace: "GPT"
   - triggers: ["спзе", "cgpt"]
     replace: "Chat GPT"
-  - triggers: ["obs+", "obsid", "обс+", "щиі+", "Обсідіан"]
+  - triggers: ["obs+", "obsid", "обс+", "щиі+", "Обсідіан", "обсідіан"]
     replace: "Obsidian"
   - triggers: ["espanso", "уізфтіщ"]
     replace: "Espanso"
@@ -116,7 +118,7 @@ matches:
   - trigger: "корист"
     replace: "користовувати"
   - trigger: "корист"
-    replace: "користовуватися"
+    replace: "користуватися"
   - trigger: "корист"
     replace: "користання"
   - trigger: "корист"
@@ -167,3 +169,10 @@ matches:
     replace: "[Більше відібраних ІТ вакансій тут](https://t.me/+ampaIMJKmu8yODAy)"
   - triggers: ["пгф+", "gua+"] # for GPT and others AI
     replace: "Дай відповідь тільки українською мовою!"
+  - triggers: ["акщтеутв+", "ау+", "fe+"]
+    replace: "Front-end DEV"
+
+
+  # Абревіатури
+  - triggers: ["seo", "іущ", "ІУЩ"]
+    replace: "SEO"
