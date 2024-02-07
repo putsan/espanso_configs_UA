@@ -17,13 +17,13 @@ matches:
   # But matches can also be dynamic:
 
   # Print the current date
-  - trigger: ":date"
+  - triggers: [":date", ":today"]
     replace: "{{mydate}}"
     vars:
       - name: mydate
         type: date
         params:
-          format: "%m/%d/%Y"
+          format: "%d %m %Y"
 
   # Print the output of a shell command
   - trigger: ":shell"
@@ -72,6 +72,8 @@ matches:
     replace: "VS Code"
   - trigger: "пше"
     replace: "git"
+  - triggers: ["докер", "Докер", "вщслук"]
+    replace: "Docker"
 
   - triggers: ["Блу", "блу"]
     replace: "Bluesky"
@@ -93,13 +95,15 @@ matches:
     replace: "Chat GPT"
   - triggers: ["obs+", "obsid", "обс+", "щиі+", "Обсідіан", "обсідіан"]
     replace: "Obsidian"
-  - triggers: ["espanso", "уізфтіщ"]
+  - triggers: ["espanso", "уізфтіщ", "уіз+"]
     replace: "Espanso"
   - triggers: ["cq+", "сй+", "сщзнй"]
     replace: "CopyQ"
 
   - triggers: ["фтвкщ", "andro"]
     replace: "Android"
+  - triggers: ["bit+", "ише+"]
+    replace: "Bitwarden"
 
   # Espanso
   - trigger: "w:t"
@@ -123,6 +127,8 @@ matches:
     replace: "користання"
   - trigger: "корист"
     replace: "користовував"
+  - trigger: "корист"
+    replace: "користовують"
 
   - trigger: "оф"
     replace: "офіційні"
@@ -136,6 +142,8 @@ matches:
     replace: "українська"
   - trigger: "укр+"
     replace: "українську"
+  - trigger: "утп"
+    replace: "ENG"
 
   - trigger: "кон+"
     replace: "конфігурацію"
