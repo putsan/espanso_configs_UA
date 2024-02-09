@@ -51,18 +51,22 @@ matches:
   # Emojis (most of for Obsidian)
   - trigger: ":100"
     replace: "💯"
-  - triggers: [":^", "::"]
+  - triggers: [":^", ":+", "::+"]
     replace: "🔺" # Obsidian
+  - triggers: ["dat+", "data+"]
+    replace: "dataview"
 
   # Obsidian
   - triggers: ["[[l", "[[л", "[[д"]
     replace: " | [[fname|alt]]"
-  - triggers: ["»»", ")_"] # isn't work first((
+  - triggers: ["»»", ")_", ")+"] # isn't work first((
     replace: ">"
   - triggers: ["й»", "йЮ", "q>", "йю", "ЙЮ"]
     replace: "> [!$|$]"
   - triggers: ["-t", "-е"]
     replace: "- [ ]"
+  - triggers: ["log+", "банка+"]
+    replace: "log::💌"
 
   # App NAMES
   - triggers: ["gh", "GH", "гх", "ГХ"]
@@ -119,7 +123,7 @@ matches:
     replace: "користуєтеся"
   - trigger: "корист"
     replace: "користуюся" # доопрацювати ці Корист треба!!))
-  - trigger: "корист"
+  - trigger: "корист"     # бо крім того що не всі закінчення є, то ще баги прога має на ці слова чомусь..
     replace: "користовувати"
   - trigger: "корист"
     replace: "користуватися"
