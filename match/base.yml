@@ -49,7 +49,7 @@ matches:
     replace: "@"
 
   # Emojis (most of for Obsidian)
-  - trigger: ":100"
+  - triggers: [":100", "100+"]
     replace: "💯"
   - triggers: [":^", ":+", "::+"]
     replace: "🔺" # Obsidian
@@ -81,7 +81,7 @@ matches:
 
   - triggers: ["Блу", "блу"]
     replace: "Bluesky"
-  - triggers: ["ЮТ", "ют", "yy", "юю"]
+  - triggers: ["ЮТ", "ют", "yy", "юю", "YT+", "yt+"]
     replace: "YouTube"
     word: true
   - triggers: ["ЮМ", "юм"]
@@ -108,6 +108,8 @@ matches:
     replace: "Android"
   - triggers: ["bit+", "ише+"]
     replace: "Bitwarden"
+  - triggers: ["лінукс", "Лінукс", "linux"]
+    replace: "Linux"
 
   # Espanso
   - trigger: "w:t"
@@ -146,6 +148,8 @@ matches:
     replace: "українська"
   - trigger: "укр+"
     replace: "українську"
+  - trigger: "укр+"
+    replace: "українській"
   - trigger: "утп"
     replace: "ENG"
 
@@ -169,6 +173,10 @@ matches:
     replace: "Readme"
   - triggers: ["Markd", "маркд"]
     replace: "Markdown"
+  - triggers: ["веб+", "ВЕБ+"]
+    replace: "WEB"
+  - triggers: ["АПІ+", "фзш", "апі+"]
+    replace: "API"
   - triggers: ["конфіг"]
     replace: "config"
 
@@ -188,3 +196,5 @@ matches:
   # Абревіатури
   - triggers: ["seo", "іущ", "ІУЩ"]
     replace: "SEO"
+  - triggers: ["foss+", "ащіі", "АЩІІ"]
+    replace: "FOSS"
