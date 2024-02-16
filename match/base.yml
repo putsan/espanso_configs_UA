@@ -43,9 +43,11 @@ matches:
   # Important symbols! (most on Cyrillic)
   - trigger: "№"
     replace: "#"
+  - trigger: "--"
+    replace: "—"
   - trigger: ":грн"
     replace: "₴"
-  - trigger: "ʼʼ"
+  - triggers: ["ʼʼ", "\"+"]
     replace: "@"
 
   # Emojis (most of for Obsidian)
@@ -69,7 +71,7 @@ matches:
     replace: "log::💌"
 
   # App NAMES
-  - triggers: ["gh", "GH", "гх", "ГХ"]
+  - triggers: ["gh", "GH", "гх", "ГХ", "пр+", "пр="]
     replace: "GitHub"
     word: true
   - trigger: "місщву"
@@ -81,17 +83,18 @@ matches:
 
   - triggers: ["Блу", "блу"]
     replace: "Bluesky"
-  - triggers: ["ЮТ", "ют", "yy", "юю", "YT+", "yt+"]
+  - triggers: ["ЮТ", "ют", "yy", "юю", "YT+", "yt+", "Ютуб+"]
     replace: "YouTube"
     word: true
   - triggers: ["ЮМ", "юм"]
     replace: "YT Music"
+    word: true
   - triggers: ["DD", "діскор"]
     replace: "Discord"
-  - triggers: ["реддіт", "reddit", "куввше"]
+  - triggers: ["реддіт", "reddit", "куввше", "кув+"]
     replace: "Reddit"
 
-  - triggers: ["ТГ", "тг", "tg"]
+  - triggers: ["ТГ", "тг", "tg", "еп+"]
     replace: "TG"
   - triggers: ["пзе", "gpt"]
     replace: "GPT"
@@ -103,6 +106,8 @@ matches:
     replace: "Espanso"
   - triggers: ["cq+", "сй+", "сщзнй"]
     replace: "CopyQ"
+  - triggers: ["сдфгвш", "claudie", "Claudie", "cl="]
+    replace: "Claude"
 
   - triggers: ["фтвкщ", "andro"]
     replace: "Android"
@@ -119,22 +124,24 @@ matches:
       replace: \"$|$\""
 
   # Дописування/пропозиції слова (закінчення)
-  - trigger: "корист"
-    replace: "користується"
-  - trigger: "корист"
-    replace: "користуєтеся"
-  - trigger: "корист"
-    replace: "користуюся" # доопрацювати ці Корист треба!!))
-  - trigger: "корист"     # бо крім того що не всі закінчення є, то ще баги прога має на ці слова чомусь..
-    replace: "користовувати"
-  - trigger: "корист"
-    replace: "користуватися"
-  - trigger: "корист"
-    replace: "користання"
-  - trigger: "корист"
-    replace: "користовував"
-  - trigger: "корист"
-    replace: "користовують"
+#  - trigger: "корист"
+#    replace: "користується"
+#  - trigger: "корист"
+#    replace: "користуєтеся"
+#  - trigger: "корист"
+#    replace: "користуюся" # доопрацювати ці Корист треба!!))
+#  - trigger: "корист"     # бо крім того що не всі закінчення є,
+                            # то ще баги прога має на ці слова чомусь..
+                            # тому поки відключив ці слова
+#    replace: "користовувати"
+#  - trigger: "корист"
+#    replace: "користуватися"
+#  - trigger: "корист"
+#    replace: "користання"
+#  - trigger: "корист"
+#    replace: "користовував"
+#  - trigger: "корист"
+#    replace: "користовують"
 
   - trigger: "оф"
     replace: "офіційні"
@@ -173,7 +180,7 @@ matches:
     replace: "Readme"
   - triggers: ["Markd", "маркд"]
     replace: "Markdown"
-  - triggers: ["веб+", "ВЕБ+"]
+  - triggers: ["веб+", "ВЕБ+", "цуи"]
     replace: "WEB"
   - triggers: ["АПІ+", "фзш", "апі+"]
     replace: "API"
@@ -198,3 +205,5 @@ matches:
     replace: "SEO"
   - triggers: ["foss+", "ащіі", "АЩІІ"]
     replace: "FOSS"
+  - triggers: ["мзт", "vpn"]
+    replace: "VPN"
