@@ -81,7 +81,7 @@ matches:
   - triggers: ["докер", "Докер", "вщслук"]
     replace: "Docker"
 
-  - triggers: ["Блу", "блу"]
+  - triggers: ["Блу", "блу", "идг"]
     replace: "Bluesky"
   - triggers: ["ЮТ", "ют", "yy", "юю", "YT+", "yt+", "Ютуб+"]
     replace: "YouTube"
@@ -91,13 +91,18 @@ matches:
     word: true
   - triggers: ["DD", "діскор"]
     replace: "Discord"
-  - triggers: ["реддіт", "reddit", "куввше", "кув+"]
+  - triggers: ["реддіт", "reddit", "куввше", "кув+", "Реддіт"]
     replace: "Reddit"
+  - triggers: ["ins=", "шті=", "інста"]
+    replace: "Instagram"
+    word: true
 
   - triggers: ["ТГ", "тг", "tg", "еп+"]
     replace: "TG"
   - triggers: ["пзе", "gpt"]
     replace: "GPT"
+  - triggers: ["Tel=", "tel=", "еудупкфь", "еуд="]
+    replace: "Telegram"
   - triggers: ["спзе", "cgpt"]
     replace: "Chat GPT"
   - triggers: ["obs+", "obsid", "обс+", "щиі+", "Обсідіан", "обсідіан"]
@@ -117,7 +122,7 @@ matches:
     replace: "Linux"
 
   # Espanso
-  - trigger: "w:t"
+  - triggers: ["w:t", "wt="]
     replace: "word: true"
   - triggers: ["es2", "уі2"]
     replace: "- triggers: [\"\", \"\"]
@@ -207,3 +212,5 @@ matches:
     replace: "FOSS"
   - triggers: ["мзт", "vpn"]
     replace: "VPN"
+  - triggers: ["usb", "гіи", "ГІИ"]
+    replace: "USB"
