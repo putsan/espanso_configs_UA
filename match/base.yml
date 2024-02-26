@@ -53,7 +53,7 @@ matches:
   # Emojis (most of for Obsidian)
   - triggers: [":100", "100+"]
     replace: "💯"
-  - triggers: [":^", ":+", "::+"]
+  - triggers: [":^", ":+", "::+", "ршп+"]
     replace: "🔺" # Obsidian
   - triggers: ["dat+", "data+"]
     replace: "dataview"
@@ -81,7 +81,7 @@ matches:
   - triggers: ["докер", "Докер", "вщслук"]
     replace: "Docker"
 
-  - triggers: ["Блу", "блу", "идг"]
+  - triggers: ["Блу", "блу", "идг", "Bly+", "blu+"]
     replace: "Bluesky"
   - triggers: ["ЮТ", "ют", "yy", "юю", "YT+", "yt+", "Ютуб+"]
     replace: "YouTube"
@@ -93,9 +93,11 @@ matches:
     replace: "Discord"
   - triggers: ["реддіт", "reddit", "куввше", "кув+", "Реддіт"]
     replace: "Reddit"
-  - triggers: ["ins=", "шті=", "інста"]
+  - triggers: ["ins=", "шті=", "інста", "Ins+"]
     replace: "Instagram"
     word: true
+  - triggers: ["in+", "linkedin", "шт+", "дшт+", "дштлувшт", "lin+"]
+    replace: "LinkedIn"
 
   - triggers: ["ТГ", "тг", "tg", "еп+"]
     replace: "TG"
@@ -114,7 +116,7 @@ matches:
   - triggers: ["сдфгвш", "claudie", "Claudie", "cl="]
     replace: "Claude"
 
-  - triggers: ["фтвкщ", "andro"]
+  - triggers: ["фтвкщ", "andro", "фтв+"]
     replace: "Android"
   - triggers: ["bit+", "ише+"]
     replace: "Bitwarden"
@@ -183,7 +185,7 @@ matches:
   # Анг трансліт/відповідники
   - trigger: "рідмі"
     replace: "Readme"
-  - triggers: ["Markd", "маркд"]
+  - triggers: ["Markd", "маркд", "md+"]
     replace: "Markdown"
   - triggers: ["веб+", "ВЕБ+", "цуи"]
     replace: "WEB"
@@ -191,6 +193,8 @@ matches:
     replace: "API"
   - triggers: ["конфіг"]
     replace: "config"
+  - triggers: ["fos+", "foss+", "os+"]
+    replace: "Open Source"
 
   # Певні власні назви (some main)
   - triggers: ["namir+", "тфьшк"]
