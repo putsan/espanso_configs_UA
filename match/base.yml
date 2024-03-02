@@ -61,8 +61,8 @@ matches:
   # Obsidian
   - triggers: ["[[l", "[[л", "[[д"]
     replace: " | [[fname|alt]]"
-  - triggers: ["»»", ")_", ")+"] # isn't work first((
-    replace: ">"
+  # - triggers: ["»»", ")_", ")+"] # isn't work first((
+  #   replace: ">"  # Don't needed anymore, [Alt + 7] combination are better, dont know before about))
   - triggers: ["й»", "йЮ", "q>", "йю", "ЙЮ"]
     replace: "> [!$|$]"
   - triggers: ["-t", "-е"]
@@ -118,13 +118,15 @@ matches:
 
   - triggers: ["фтвкщ", "andro", "фтв+"]
     replace: "Android"
+  - triggers: ["іфь+", "sam+", "Sam+"]
+    replace: "Samsung"
   - triggers: ["bit+", "ише+"]
     replace: "Bitwarden"
   - triggers: ["лінукс", "Лінукс", "linux"]
     replace: "Linux"
 
   # Espanso
-  - triggers: ["w:t", "wt="]
+  - triggers: ["w:t", "ц+", "ц:"]
     replace: "word: true"
   - triggers: ["es2", "уі2"]
     replace: "- triggers: [\"\", \"\"]
@@ -169,10 +171,14 @@ matches:
 
   - trigger: "кон+"
     replace: "конфігурацію"
+  - triggers: ["конц+", "кон+"]
+    replace: "концентрації (без сповіщень)"
   - trigger: "реа+"
     replace: "реалізовано"
   - trigger: "смарт+"
     replace: "смартфон"
+  - trigger: "альт+"
+    replace: "альтернативні"
 
   # Виправлення слів
   - triggers: ["Гуглю", "гуглю"]
@@ -195,10 +201,20 @@ matches:
     replace: "config"
   - triggers: ["fos+", "foss+", "os+"]
     replace: "Open Source"
+  - triggers: ["акуу", "фрі+"]
+    replace: "free"
+  - triggers: ["тріал"]
+    replace: "trial"
+  - triggers: ["фзз", "апка"]
+    replace: "app"
 
   # Певні власні назви (some main)
   - triggers: ["namir+", "тфьшк"]
     replace: "namirGO"
+  - triggers: ["iphone", "шзрщту", "шзр+", "iph+"]
+    replace: "iPhone"
+  - triggers: ["mac+", "mackbook", "ьфс+"]
+    replace: "MackBook"
 
   # Мої сніппети (Публічні тільки)
   - triggers: ["шем+", "itv+"]
@@ -207,8 +223,15 @@ matches:
     replace: "Дай відповідь тільки українською мовою!"
   - triggers: ["акщтеутв+", "ау+", "fe+"]
     replace: "Front-end DEV"
+  - triggers: ["bio+", "ишщ+"]
+    replace: "https://putsan.bio.link"
 
-
+  # Сленг та Скорочення укр переважно
+  - trigger: "юзав+"
+    replace: "використовував"
+  - trigger: "магаз"
+    replace: "магазин"
+    word: true
   # Абревіатури
   - triggers: ["seo", "іущ", "ІУЩ"]
     replace: "SEO"
