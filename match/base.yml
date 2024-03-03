@@ -53,8 +53,16 @@ matches:
   # Emojis (most of for Obsidian)
   - triggers: [":100", "100+"]
     replace: "💯"
-  - triggers: [":^", ":+", "::+", "ршп+"]
+  - triggers: [":^", "ршп+", "р+"]
     replace: "🔺" # Obsidian
+  - triggers: ["ррр", hhh"]
+    replace: "⏫"
+  - triggers: ["ььь", "mmm"]
+    replace: "🔼"
+  - triggers: ["lll", "ддд"]
+    replace: "🔽"
+  - trigger: "д+"
+    replace: "⏬"
   - triggers: ["dat+", "data+"]
     replace: "dataview"
 
@@ -67,6 +75,7 @@ matches:
     replace: "> [!$|$]"
   - triggers: ["-t", "-е"]
     replace: "- [ ]"
+    word: true
   - triggers: ["log+", "банка+"]
     replace: "log::💌"
 
@@ -81,7 +90,7 @@ matches:
   - triggers: ["докер", "Докер", "вщслук"]
     replace: "Docker"
 
-  - triggers: ["Блу", "блу", "идг", "Bly+", "blu+"]
+  - triggers: ["Блу", "блу", "идг+", "Bly+", "blu+"]
     replace: "Bluesky"
   - triggers: ["ЮТ", "ют", "yy", "юю", "YT+", "yt+", "Ютуб+"]
     replace: "YouTube"
@@ -115,6 +124,8 @@ matches:
     replace: "CopyQ"
   - triggers: ["сдфгвш", "claudie", "Claudie", "cl="]
     replace: "Claude"
+  - triggers: ["Hil+", "ршд+", "ршдщлфд"]
+    replace: "Hilocal"
 
   - triggers: ["фтвкщ", "andro", "фтв+"]
     replace: "Android"
@@ -126,7 +137,7 @@ matches:
     replace: "Linux"
 
   # Espanso
-  - triggers: ["w:t", "ц+", "ц:"]
+  - triggers: ["w:t", "ц+", "ц:", "wt+"]
     replace: "word: true"
   - triggers: ["es2", "уі2"]
     replace: "- triggers: [\"\", \"\"]
@@ -180,13 +191,19 @@ matches:
   - trigger: "альт+"
     replace: "альтернативні"
 
-  # Виправлення слів
+  # Виправлення слів та помилок
   - triggers: ["Гуглю", "гуглю"]
     replace: "Ґуґлю"
     word: true
   - triggers: ["Гугл", "гугл"]
     replace: "Ґуґл"
     word: true
+  - trigger: "аудіочати"
+    replace: "аудіо-чати"
+
+  # Суржик-— виправлення
+  - trigger: "загружений"
+    replace: "завантажений"
 
   # Анг трансліт/відповідники
   - trigger: "рідмі"
@@ -203,10 +220,12 @@ matches:
     replace: "Open Source"
   - triggers: ["акуу", "фрі+"]
     replace: "free"
-  - triggers: ["тріал"]
+  - triggers: ["тріал", "екшфд"]
     replace: "trial"
-  - triggers: ["фзз", "апка"]
+  - triggers: ["фзз", "апка", "апку"]
     replace: "app"
+  - triggers: ["Блютуз", "блютуз", "блю+", "идг+"]
+    replace: "Bluetooth"
 
   # Певні власні назви (some main)
   - triggers: ["namir+", "тфьшк"]
@@ -229,6 +248,8 @@ matches:
   # Сленг та Скорочення укр переважно
   - trigger: "юзав+"
     replace: "використовував"
+  - trigger: "юзають"
+    replace: "використовують"
   - trigger: "магаз"
     replace: "магазин"
     word: true
