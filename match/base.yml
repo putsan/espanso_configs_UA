@@ -55,6 +55,7 @@ matches:
     replace: "💯"
   - triggers: [":^", "ршп+", "р+"]
     replace: "🔺" # Obsidian
+    word: true
   - triggers: ["ррр", hhh"]
     replace: "⏫"
   - triggers: ["ььь", "mmm"]
@@ -90,9 +91,10 @@ matches:
   - triggers: ["докер", "Докер", "вщслук"]
     replace: "Docker"
 
-  - triggers: ["Блу", "блу", "идг+", "Bly+", "blu+"]
+  - triggers: ["Блу+", "блу+", "идг+", "Bly+", "blu+"]
     replace: "Bluesky"
-  - triggers: ["ЮТ", "ют", "yy", "юю", "YT+", "yt+", "Ютуб+"]
+    word: true
+  - triggers: ["ЮТ", "ют", "yy", "юю", "YT+", "yt+", "Ютуб+", "не+"]
     replace: "YouTube"
     word: true
   - triggers: ["ЮМ", "юм"]
@@ -102,7 +104,7 @@ matches:
     replace: "Discord"
   - triggers: ["реддіт", "reddit", "куввше", "кув+", "Реддіт"]
     replace: "Reddit"
-  - triggers: ["ins=", "шті=", "інста", "Ins+"]
+  - triggers: ["ins+", "шті+", "інста", "Ins+"]
     replace: "Instagram"
     word: true
   - triggers: ["in+", "linkedin", "шт+", "дшт+", "дштлувшт", "lin+"]
@@ -222,8 +224,10 @@ matches:
     replace: "free"
   - triggers: ["тріал", "екшфд"]
     replace: "trial"
-  - triggers: ["фзз", "апка", "апку"]
+  - triggers: ["фзз", "апка", "апку", "апп"]
     replace: "app"
+  - trigger: "апок"
+    replace: "apps"
   - triggers: ["Блютуз", "блютуз", "блю+", "идг+"]
     replace: "Bluetooth"
 
@@ -262,3 +266,5 @@ matches:
     replace: "VPN"
   - triggers: ["usb", "гіи", "ГІИ"]
     replace: "USB"
+  - triggers: ["тас+", "nfc", "ТАС"]
+    replace: "NFC"
