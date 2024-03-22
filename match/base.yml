@@ -90,6 +90,8 @@ matches:
     replace: "git"
   - triggers: ["докер", "Докер", "вщслук"]
     replace: "Docker"
+  - triggers: ["RN+", "rn+", "кт+"]
+    replace: "React Native"
 
   - triggers: ["Блу+", "блу+", "идг+", "Bly+", "blu+"]
     replace: "Bluesky"
@@ -218,6 +220,7 @@ matches:
     replace: "API"
   - triggers: ["конфіг"]
     replace: "config"
+    tword: true
   - triggers: ["fos+", "foss+", "os+"]
     replace: "Open Source"
   - triggers: ["акуу", "фрі+"]
@@ -257,6 +260,9 @@ matches:
   - trigger: "магаз"
     replace: "магазин"
     word: true
+  - trigger: "днюхи+"
+    replace: "дня народження"
+
   # Абревіатури
   - triggers: ["seo", "іущ", "ІУЩ"]
     replace: "SEO"
