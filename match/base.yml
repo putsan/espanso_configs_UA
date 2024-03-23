@@ -204,6 +204,8 @@ matches:
     word: true
   - trigger: "аудіочати"
     replace: "аудіо-чати"
+  - trigger: "свому"
+    replace: "своєму"
 
   # Суржик-— виправлення
   - trigger: "загружений"
@@ -237,7 +239,7 @@ matches:
   # Певні власні назви (some main)
   - triggers: ["namir+", "тфьшк"]
     replace: "namirGO"
-  - triggers: ["iphone", "шзрщту", "шзр+", "iph+"]
+  - triggers: ["iphone", "шзрщту", "шзр+", "iph+", "Iphone"]
     replace: "iPhone"
   - triggers: ["mac+", "mackbook", "ьфс+"]
     replace: "MackBook"
@@ -274,3 +276,5 @@ matches:
     replace: "USB"
   - triggers: ["тас+", "nfc", "ТАС"]
     replace: "NFC"
+  - triggers: ["ІЗФ", "ізф"]
+    replace: "SPA"
