@@ -146,6 +146,8 @@ matches:
   - triggers: ["es2", "уі2"]
     replace: "- triggers: [\"\", \"\"]
       replace: \"$|$\""
+  - triggers: ["cdd+", "ccdd", "cdtd"]
+    replace: "config changes during today"
 
   # Дописування/пропозиції слова (закінчення)
 #  - trigger: "корист"
